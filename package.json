@@ -1,0 +1,57 @@
+{
+  "name": "vue2-leaflet-height-graph",
+  "version": "0.1.0",
+  "description": "Leaflet.Heightgraph plugin extension for vue2-leaflet package",
+  "main": "dist/LControlHeightGraph.umd.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode production --target lib --name Vue2LeafletHeightGraph src/Vue2LeafletHeightGraph.vue",
+    "lint": "vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph.git"
+  },
+  "keywords": [
+    "vue",
+    "leaflet",
+    "vue2-leaflet",
+    "heightgraph",
+    "elevation",
+    "profile",
+    "height"
+  ],
+  "author": "amandus@openrouteservice.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph/issues"
+  },
+  "homepage": "https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph#readme",
+  "peerDependencies": {
+    "@types/leaflet": "^1.5.5",
+    "leaflet": "^1.5.1",
+    "vue2-leaflet": "^2.2.1"
+  },
+  "dependencies": {
+    "leaflet.heightgraph": "git+https://github.com/GIScience/Leaflet.Heightgraph#rollup"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.5.6",
+    "@vue/cli": "^4.0.5",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/cli-service-global": "^4.0.5",
+    "@vue/cli-plugin-eslint": "^4.1.1",
+    "vue-template-compiler": "^2.6.10",
+    "vue2-leaflet": "^2.2.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/base"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  }
+}
