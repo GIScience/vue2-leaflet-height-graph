@@ -27,5 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -->
 
+## [v0.1.1] - 2019-12-09
+
+### Fixed
+- repository links
+
+
 ## [v0.1.0] - 2019-12-05
 Initial Version of the vue2-leaflet-height-graph plugin
