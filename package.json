@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph.git"
+    "url": "git+https://github.com/GIScience/vue2-leaflet-heightgraph.git"
   },
   "keywords": [
     "vue",
@@ -25,9 +25,9 @@
   "author": "amandus@openrouteservice.org",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph/issues"
+    "url": "https://github.com/GIScience/vue2-leaflet-heightgraph/issues"
   },
-  "homepage": "https://github.com/TheGreatRefrigerator/vue2-leaflet-heightgraph#readme",
+  "homepage": "https://github.com/GIScience/vue2-leaflet-heightgraph#readme",
   "peerDependencies": {
     "@types/leaflet": "^1.5.5",
     "leaflet": "^1.5.1",
