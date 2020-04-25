@@ -155,12 +155,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ed81b26-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=015ba602&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"19299a95-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=ff384076&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"display":"none"}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=015ba602&
+// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=ff384076&
 
 // EXTERNAL MODULE: external "leaflet.heightgraph"
 var external_leaflet_heightgraph_ = __webpack_require__("ef37");
@@ -223,7 +223,8 @@ function normal(data) {
     name: 'l-control-height-graph',
     data () {
         return {
-            availableParsers: parser_namespaceObject
+            availableParsers: parser_namespaceObject,
+            hg: null,
         }
     },
     props: {
@@ -250,18 +251,30 @@ function normal(data) {
     },
     mounted() {
         this.$nextTick(() => {
-            const map = this.$parent.mapObject;
-            let hg = L.control.heightgraph({...this.options,...{
+            this.hg = L.control.heightgraph({...this.options,...{
                 // merges quick settings with options if they are defined
                 ...(this.position && {position: this.position}),
                 ...(this.expand && {expand: this.expand})
-            }})
-            hg.addTo(map)
+            }});
+            this.updateGraph()
+        })
+    },
+    methods: {
+        updateGraph() {
+            if(this.hg) {
+                this.hg.remove()
+            }
+            const map = this.$parent.mapObject
+            this.hg.addTo(map)
             let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
             let dataCollections = this.availableParsers[p](this.data)
-            hg.addData(dataCollections)
-
-        })
+            this.hg.addData(dataCollections)
+        }
+    },
+    watch: {
+        data: function () {
+            this.updateGraph();
+        },
     }
 });
 

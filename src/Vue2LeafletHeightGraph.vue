@@ -11,7 +11,8 @@
         name: 'l-control-height-graph',
         data () {
             return {
-                availableParsers: parsers
+                availableParsers: parsers,
+                hg: null,
             }
         },
         props: {
@@ -38,18 +39,30 @@
         },
         mounted() {
             this.$nextTick(() => {
-                const map = this.$parent.mapObject;
-                let hg = L.control.heightgraph({...this.options,...{
+                this.hg = L.control.heightgraph({...this.options,...{
                     // merges quick settings with options if they are defined
                     ...(this.position && {position: this.position}),
                     ...(this.expand && {expand: this.expand})
-                }})
-                hg.addTo(map)
+                }});
+                this.updateGraph()
+            })
+        },
+        methods: {
+            updateGraph() {
+                if(this.hg) {
+                    this.hg.remove()
+                }
+                const map = this.$parent.mapObject
+                this.hg.addTo(map)
                 let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
                 let dataCollections = this.availableParsers[p](this.data)
-                hg.addData(dataCollections)
-
-            })
+                this.hg.addData(dataCollections)
+            }
+        },
+        watch: {
+            data: function () {
+                this.updateGraph();
+            },
         }
     }
 </script>
