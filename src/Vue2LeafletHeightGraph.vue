@@ -47,6 +47,11 @@
                 this.updateGraph()
             })
         },
+        beforeDestroy() {
+            if(this.hg) {
+                this.hg.remove()
+            }
+        },
         methods: {
             updateGraph() {
                 if(this.hg) {
@@ -61,7 +66,11 @@
         },
         watch: {
             data: function () {
-                this.updateGraph();
+                if(!this.data && this.hg) {
+                    this.hg.remove()
+                } else {
+                    this.updateGraph();
+                }
             },
         }
     }
