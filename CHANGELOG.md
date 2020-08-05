@@ -26,6 +26,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - in case of vulnerabilities
 
 -->
+## [Unreleased]
+
+### Added
+- data watcher
+    - changing the 'data' prop now rebuilds the graph without
+    removing and adding the whole leaflet control by calling
+    addData() of the L.control.heightgraph instance
+- 'geoJson' parser
+    - supports LineStrings, LineString-Features and FeatureCollections of
+    LineStrings
+- geoJson examples
+- second normal example
+- colorMappings to adjust example colors and legend text
+
+### Changed
+- dependencies -> updated to latest
+
 ## [v0.1.2] - 2019-12-09
 
 ### Fixed

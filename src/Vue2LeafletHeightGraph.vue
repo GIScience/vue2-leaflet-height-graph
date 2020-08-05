@@ -12,7 +12,7 @@
         data () {
             return {
                 availableParsers: parsers,
-                hg: null,
+                hgInstance: null
             }
         },
         props: {
@@ -46,57 +46,40 @@
                 console.log('mounted')
             }
             this.$nextTick(() => {
-                this.hg = L.control.heightgraph({...this.options,...{
+                const map = this.$parent.mapObject;
+                this.hgInstance = L.control.heightgraph({...this.options,...{
                     // merges quick settings with options if they are defined
                     ...(this.position && {position: this.position}),
                     ...(this.expand && {expand: this.expand})
-                }});
-                this.updateGraph()
+                }})
+                this.hgInstance.addTo(map)
+                let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
+                let dataCollections = this.availableParsers[p](this.data)
+                this.hgInstance.addData(dataCollections)
             })
         },
         beforeDestroy() {
             if(this.debug) {
                 console.log('beforeDestroy')
             }
-            if(this.hg) {
-                this.hg.remove()
-            }
-        },
-        methods: {
-            updateGraph() {
-                if(this.debug) {
-                    console.log('updateGraph')
-                }
-                if(this.hg) {
-                    this.hg.remove()
-                }
-                const map = this.$parent.mapObject
-                let dataCollections = null;
-                try {
-                    this.hg.addTo(map)
-                    let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-                    
-                    dataCollections = this.availableParsers[p](this.data)
-                    this.hg.addData(dataCollections)
-                } catch(err) {
-                    console.log('Error in updateGraph: ')
-                    console.log(err)
-                    console.log('data', this.data)
-                    console.log('dataCollections', dataCollections)
-                }
+            if(this.hgInstance) {
+                this.hgInstance.remove()
             }
         },
         watch: {
-            data: function () {
-                if(this.debug) {
-                    console.log('watch.data')
-                }
-                if(!this.data && this.hg) {
-                    this.hg.remove()
-                } else {
-                    this.updateGraph();
-                }
-            },
+            data: function (newVal, oldVal) {
+                this.$nextTick(() => {
+                    if (this.debug) {console.log("data change")}
+                    try {
+                        let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
+                        this.hgInstance.addData(this.availableParsers[p](newVal))
+                    } catch(e) {
+                        console.error('Unable to parse data using "'
+                            + this.parser + '" parser.\n'
+                            + e)
+                    }
+                })
+            }
         }
     }
 </script>

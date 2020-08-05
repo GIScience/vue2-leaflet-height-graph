@@ -1,4 +1,4 @@
-export default {
+export const orsJson = {
     "type": "FeatureCollection",
     "features": [
         {

@@ -1,4 +1,4 @@
-export default [{
+export const geoJsonRoute = [{
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",
@@ -28,6 +28,6 @@ export default [{
         }
     }],
     "properties": {
-        "summary": "Steepness"
+        "summary": "steepness"
     }
 }]
