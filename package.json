@@ -1,6 +1,6 @@
 {
   "name": "vue2-leaflet-height-graph",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Leaflet.Heightgraph plugin extension for vue2-leaflet package",
   "main": "dist/LControlHeightGraph.umd.min.js",
   "scripts": {
