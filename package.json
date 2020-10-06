@@ -13,7 +13,7 @@
     "escapedName": "vue2-leaflet-height-graph",
     "rawSpec": "^0.2.0",
     "saveSpec": null,
-    "fetchSpec": "^0.2.0"
+    "fetchSpec": "^0.3.0"
   },
   "_requiredBy": [
     "#USER",
