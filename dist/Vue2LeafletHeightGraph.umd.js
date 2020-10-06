@@ -96,21 +96,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "ae28":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "860c":
+/***/ (function(module, exports) {
 
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "c765":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ae28");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+module.exports = require("leaflet");
 
 /***/ }),
 
@@ -118,6 +107,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 module.exports = require("current-script-polyfill");
+
+/***/ }),
+
+/***/ "ed27":
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet.heightgraph/dist/L.Control.Heightgraph.min.css");
 
 /***/ }),
 
@@ -139,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 var parser_namespaceObject = {};
 __webpack_require__.r(parser_namespaceObject);
 __webpack_require__.d(parser_namespaceObject, "ors", function() { return ors; });
-__webpack_require__.d(parser_namespaceObject, "normal", function() { return normal; });
+__webpack_require__.d(parser_namespaceObject, "noParser", function() { return noParser; });
 __webpack_require__.d(parser_namespaceObject, "geoJson", function() { return geoJson; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -159,15 +155,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1d5174f1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=678cdb79&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7cff6886-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=dc30bd84&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"display":"none"}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=678cdb79&
-
-// EXTERNAL MODULE: external "leaflet.heightgraph"
-var external_leaflet_heightgraph_ = __webpack_require__("ef37");
+// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=dc30bd84&
 
 // CONCATENATED MODULE: ./src/utils/parser.js
 /**
@@ -251,7 +244,7 @@ function ors(orsResponse) {
     }
     return collections
 }
-function normal(data) {
+function noParser(data) {
     return data
 }
 
@@ -297,97 +290,272 @@ function geoJson(data) {
      return heighGraphConformalData
 }*/
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
+// EXTERNAL MODULE: external "leaflet"
+var external_leaflet_ = __webpack_require__("860c");
+var external_leaflet_default = /*#__PURE__*/__webpack_require__.n(external_leaflet_);
 
+// CONCATENATED MODULE: ./src/size-props.js
 
-
-
-/* harmony default export */ var Vue2LeafletHeightGraphvue_type_script_lang_js_ = ({
-    name: 'l-control-height-graph',
-    data () {
-        return {
-            availableParsers: parser_namespaceObject,
-            hgInstance: null
-        }
-    },
-    props: {
-        position: {
-            type: String,
-            default: undefined
-        },
-        expand: {
-            type: Boolean,
-            default: undefined
-        },
-        data: {
-            type: [Object,Array],
-            default: () => []
-        },
-        parser: {
-            type: String,
-            default: 'normal'
-        },
-        options: {
-            type: Object,
-            default: () => {}
-        },
-        debug: {
-            type: Boolean,
-            default: false
-        }
-    },
-    mounted() {
-        if(this.debug) {
-            console.log('mounted')
-        }
-        this.$nextTick(() => {
-            const map = this.$parent.mapObject;
-            this.hgInstance = L.control.heightgraph({...this.options,...{
-                // merges quick settings with options if they are defined
-                ...(this.position && {position: this.position}),
-                ...(this.expand && {expand: this.expand})
-            }})
-            this.hgInstance.addTo(map)
-            let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-            let dataCollections = this.availableParsers[p](this.data)
-            this.hgInstance.addData(dataCollections)
-        })
-    },
-    beforeDestroy() {
-        if(this.debug) {
-            console.log('beforeDestroy')
-        }
-        if(this.hgInstance) {
-            this.hgInstance.remove()
-        }
-    },
-    watch: {
-        data: function (newVal, oldVal) {
-            this.$nextTick(() => {
-                if (this.debug) {console.log("data change")}
-                try {
-                    let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-                    this.hgInstance.addData(this.availableParsers[p](newVal))
-                } catch(e) {
-                    console.error('Unable to parse data using "'
-                        + this.parser + '" parser.\n'
-                        + e)
-                }
-            })
-        }
-    }
+/* harmony default export */ var size_props = ({
+  props: [
+    'xs1', 'xs2', 'xs3','xs4','xs5','xs6', 'xs7', 'xs8', 'xs9', 'xs10', 'xs11', 'xs12',
+    'sm1', 'sm2', 'sm3','sm4','sm5','sm6', 'sm7', 'sm8', 'sm9', 'sm10', 'sm11', 'sm12',
+    'md1', 'md2', 'md3','md4','md5','md6', 'md7', 'md8', 'md9', 'md10', 'md11', 'md12',
+    'lg1', 'lg2', 'lg3','lg4','lg5','lg6', 'lg7', 'lg8', 'lg9', 'lg10', 'lg11', 'lg12',
+    'xl1', 'xl2', 'xl3','xl4','xl5','xl6', 'xl7', 'xl8', 'xl9', 'xl10', 'xl11', 'xl12',    
+  ],
 });
 
-// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js&
- /* harmony default export */ var src_Vue2LeafletHeightGraphvue_type_script_lang_js_ = (Vue2LeafletHeightGraphvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=style&index=0&lang=css&
-var Vue2LeafletHeightGraphvue_type_style_index_0_lang_css_ = __webpack_require__("c765");
+// EXTERNAL MODULE: external "leaflet.heightgraph"
+var external_leaflet_heightgraph_ = __webpack_require__("ef37");
 
+// EXTERNAL MODULE: external "leaflet.heightgraph/dist/L.Control.Heightgraph.min.css"
+var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
+
+// CONCATENATED MODULE: ./node_modules/eslint-loader??ref--12-0!./src/vue2-leaflet-height-graph.js?vue&type=script&lang=js&
+
+
+
+
+
+
+/* harmony default export */ var vue2_leaflet_height_graphvue_type_script_lang_js_ = ({
+  name: 'l-control-height-graph',
+  mixins: [size_props],
+  data() {
+    return {
+      isOpen: false,
+      availableParsers: parser_namespaceObject,
+      hgInstance: null,
+      breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
+      defaultParser: 'geoJson',
+      defaultPosition: 'bottomright'
+    }
+  },
+  components: {
+    ResizeObserver
+  },
+  props: {
+    position: {
+      type: String,
+      default: undefined
+    },
+    expand: {
+      type: Boolean,
+      default: undefined
+    },
+    data: {
+      type: [Object, Array],
+      default: () => []
+    },
+    options: {
+      type: Object,
+      default: () => {}
+    },
+    debug: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    leafletAcessor() {
+      let leaflet = external_leaflet_default.a
+      return leaflet
+    },
+    optionsGetter () {
+      let options = this.options || {}
+      options.width = options.width || this.getWidth()
+      options.parser = options.parser || this.defaultParser
+      options.position = options.position || this.defaultPosition
+      return options
+    }
+  },
+  methods: {
+    /**
+     * Load the component, add the data, add the component to
+     * the map and set the close button watcher
+     */
+    loadData () {
+      const map = this.$parent.mapObject
+      let heightGraphOptions = this.buildHeightGraphOptions()
+      this.hgInstance = this.leafletAcessor.control.heightgraph(heightGraphOptions)
+      this.hgInstance.addTo(map)
+      this.addData(this.data)
+      this.isOpen = true
+      this.watchCloseClick()
+    },
+    /**
+     * Add data to the component
+     * @param {Object} data 
+     */
+    addData (data) {
+      try {
+        let p = Object.keys(this.availableParsers).includes(this.optionsGetter.parser) ? this.optionsGetter.parser : 'noParser'
+        this.hgInstance.addData(this.availableParsers[p](data))
+      } catch (e) {
+        let error = `Unable to parse data using ${this.optionsGetter.parser} parser \n ${e.message}`
+        console.error(error)
+      }      
+    },
+    /**
+     * When the window size changes
+     * update the component size
+     */
+    updateSize () {
+      if (this.isOpen && this.hgInstance ) {
+        this.hgInstance.resize({width: this.getWidth(), height: this.optionsGetter.height})
+      }
+    },
+    /**
+     * Get the width that must be
+     * used to render the component
+     * @returns {Number}
+     */
+    getWidth () {
+      let breakpoint = this.getViewBreakpoint()
+      let sizePropValue = this.getSizePecentualValue(breakpoint)
+      let parentWidth = this.$el.parentNode.clientWidth
+      if (sizePropValue) {
+        let width = (parentWidth / 12) * sizePropValue
+        return width * 0.98 // make sure there is a little space on the sides
+      } else { // If no size was defined, use almos all the parent size
+        return parentWidth * 0.98 // make sure there is a little space on the sides
+      }
+    },
+    /**
+     * Get the size value considering the current
+     * breakpoint and the previous breakpoint available
+     * If there is no value for the current view breakpoint
+     * try to get the value for the previous breakpoint available
+     * Example: window size is medium, but only `sm8` and `lg8` view
+     * breakpoints size are defined, so the value for sm, in this case 2
+     * is returned as the percentile of the parent element that must be 
+     * used as component width.
+     * @param {String} breakpoint 
+     * @returns {Number} sizePropValue
+     */
+    getSizePecentualValue (breakpoint) {
+      // Find the passed size option      
+      let sizePropValue = this.getPropBreakpoitValue(breakpoint)
+      if (!sizePropValue) {
+        let currentBreakPointIndex = this.breakpointsOrder.indexOf(breakpoint) 
+        let previousIndex = currentBreakPointIndex -1
+        if (this.breakpointsOrder[previousIndex]) {
+          breakpoint = this.breakpointsOrder[previousIndex]
+          sizePropValue = this.getSizePecentualValue(breakpoint)
+        }
+      }
+      return sizePropValue
+    },
+    /**
+     * Get the 
+     * @param {String} breakpoint 
+     * @returns {Number} sizePropValue
+     */
+    getPropBreakpoitValue (breakpoint) {
+      let sizePropValue = null
+      // go through every prop starting with
+      // the given breakpoint and get the
+      // value of this breakpoint value
+      // For example: md1 -> value = 1; lg2 => value = 2 etc
+      for (let index = 1; index <= 12; index++) {
+        let breakpointSize = `${breakpoint}${index}`
+        if (this.$props[breakpointSize] !== undefined) {
+          sizePropValue = index
+          break
+        }        
+      }
+      return sizePropValue
+    },
+    /**
+     * Get the current view breakpoint 
+     * considering the innerWidth
+     * and the breakpoints defined 
+     * by vuetify. @see https://dev.vuetifyjs.com/en/components/grids
+     * @returns {String} size
+     */
+    getViewBreakpoint () {
+      let size = ''
+      switch (true) {
+        case (window.innerWidth < 500):
+          size = 'xs'
+          break;
+        case (window.innerWidth > 600 && window.innerWidth < 960):
+          size = 'sm'
+          break; 
+        case (window.innerWidth > 960 && window.innerWidth < 1264):
+          size = 'md'
+          break; 
+        case (window.innerWidth > 1264):
+          size = 'xl'
+          break;      
+      }
+      return size
+    },
+    /**
+     * Build the options object expected by
+     * the leaflet.heightgraph library
+     * by merging vuejs component options
+     * @returns {Object}
+     */
+    buildHeightGraphOptions () {
+      let heightGraphOptions = {
+        ...this.optionsGetter, ...{
+          // merges quick settings with options if they are defined
+          ...(this.position && { position: this.position }),
+          ...(this.expand && { expand: this.expand })
+        }
+      }
+      return heightGraphOptions
+    },
+    /**
+     * Adds a onclick listener to the graph close
+     * button and emits a vuejs `closed` event when
+     * the button is clicked and the graph is closed
+     * Considering that the wrapped leaflet.heightgraph
+     * component is closed (and this wrapping component is kept)
+     * we also set the flag isOpen as false
+     * @emits closed
+     */
+    watchCloseClick () {
+      let context = this
+      // If there is a valid instance
+      // and it is open, then set the listener
+      if (this.hgInstance && this.isOpen) {
+        let elements = document.getElementsByClassName('heightgraph-close-icon')
+        // If the close btn is found
+        if (elements.length > 0) {
+          var closeAnchor = elements[0]
+          closeAnchor.onclick = () => {
+            context.hgInstance.remove()
+            context.isOpen = false
+            context.$emit('closed')
+          }
+        }
+      }
+    }
+  },
+  mounted() {
+    this.$nextTick(this.loadData)
+    window.addEventListener('resize', this.updateSize)
+  },
+  beforeDestroy() {
+    if (this.hgInstance) {
+      this.hgInstance.remove()
+      this.isOpen = false
+    }
+  },
+  watch: {
+    data: function (newVal) {
+      this.$nextTick(() => {
+        this.addData(newVal)
+      })
+    }
+  }
+});
+
+// CONCATENATED MODULE: ./src/vue2-leaflet-height-graph.js?vue&type=script&lang=js&
+ /* harmony default export */ var src_vue2_leaflet_height_graphvue_type_script_lang_js_ = (vue2_leaflet_height_graphvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -489,11 +657,10 @@ function normalizeComponent (
 
 
 
-
 /* normalize component */
 
 var component = normalizeComponent(
-  src_Vue2LeafletHeightGraphvue_type_script_lang_js_,
+  src_vue2_leaflet_height_graphvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,

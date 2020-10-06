@@ -79,7 +79,7 @@ export function ors(orsResponse) {
     }
     return collections
 }
-export function normal(data) {
+export function noParser(data) {
     return data
 }
 
