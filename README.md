@@ -118,4 +118,4 @@ Fast setting for `options.expand` (overwriting).
 
 ### Events
 
-This component emits an `closed` when the up-right corner close button is hit  and it is closed. If can be used to synchronize the visibility of the graph when it is displayed conditionally.
+This component emits a `closed` event when the up-right corner graph close button is hit and it is closed. It can be used to synchronize the visibility of the graph with other elements when it is displayed conditionally.
