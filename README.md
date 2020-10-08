@@ -106,12 +106,16 @@ example:
 { width: 1000, position: 'bottomleft', parser: 'ors' }
 ```
 
-### position
+#### position
 
 String to set the position on the map. Values can be `'bottomleft'`, `'bottomright'`, `'topleft'`, `'topright'`.
 Fast setting for `options.position` (overwriting).
 
-### expand
+#### expand
 
 Boolean for expanding the heightgraph window on creation. Values are `true` and `false`.
 Fast setting for `options.expand` (overwriting).
+
+### Events
+
+This component emits an `closed` when the up-right corner close button is hit  and it is closed. If can be used to synchronize the visibility of the graph when it is displayed conditionally.
