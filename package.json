@@ -26,6 +26,9 @@
   "author": {
     "name": "amandus@openrouteservice.org"
   },
+  "contributors": [
+    "amon@openrouteservice.org"
+  ],
   "bugs": {
     "url": "https://github.com/GIScience/vue2-leaflet-height-graph/issues"
   },

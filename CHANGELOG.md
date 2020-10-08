@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - in case of vulnerabilities
 
 -->
+
+## [v0.3.0] - 2020-10-08
+
+Refactored, improved in-code documentation and added internal responsiveness and and close event.
+
 ## [v0.2.0] - 2020-08-05
 
 ### Added
