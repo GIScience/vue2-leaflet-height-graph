@@ -1,61 +1,18 @@
 {
-  "_from": "vue2-leaflet-height-graph@^0.3.0",
-  "_id": "vue2-leaflet-height-graph@0.3.0",
-  "_inBundle": false,
-  "_integrity": "sha512-atQC+klaDwzyxRbBDtFz4WBtwYA1dJNTv/UzmJupICRkHm9I0ECZ8OIG/5BAGSBklwsqgiTKkZPYAEZK3e7JHg==",
-  "_location": "/vue2-leaflet-height-graph",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "vue2-leaflet-height-graph@^0.3.0",
-    "name": "vue2-leaflet-height-graph",
-    "escapedName": "vue2-leaflet-height-graph",
-    "rawSpec": "^0.3.0",
-    "saveSpec": null,
-    "fetchSpec": "^0.3.0"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/vue2-leaflet-height-graph/-/vue2-leaflet-height-graph-0.2.0.tgz",
-  "_shasum": "cbc40554c3000fb4ccb668e52c78633a6ab995be",
-  "_spec": "vue2-leaflet-height-graph@^0.2.0",
-  "_where": "/Volumes/DATA/apps/ors-map-client",
-  "author": {
-    "name": "amandus@openrouteservice.org"
-  },
-  "contributors": [
-    "amon@openrouteservice.org"
-  ],
-  "bugs": {
-    "url": "https://github.com/GIScience/vue2-leaflet-height-graph/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "leaflet.heightgraph": "^1.3.2",
-    "current-script-polyfill": "^1.0.0"
-  },
-  "deprecated": false,
+  "name": "vue2-leaflet-height-graph",
+  "version": "0.3.0",
   "description": "Leaflet.Heightgraph plugin extension for vue2-leaflet package",
-  "devDependencies": {
-    "@types/leaflet": "^1.5.17",
-    "@vue/cli": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
-    "@vue/cli-service": "^3.12.1",
-    "@vue/cli-service-global": "^4.4.6",
-    "leaflet": "^1.6.0",
-    "vue-template-compiler": "^2.6.11",
-    "vue2-leaflet": "^2.5.2",
-    "webpack-node-externals": "^1.7.2"
+  "main": "dist/Vue2LeafletHeightGraph.umd.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode production --target lib --name Vue2LeafletHeightGraph src/Vue2LeafletHeightGraph.vue",
+    "lint": "vue-cli-service lint"
   },
-  "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 2019
-    }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GIScience/vue2-leaflet-height-graph.git"
   },
-  "homepage": "https://github.com/GIScience/vue2-leaflet-height-graph#readme",
   "keywords": [
     "vue",
     "leaflet",
@@ -65,23 +22,39 @@
     "profile",
     "height"
   ],
+  "author": "amandus@openrouteservice.org",
+  "contributors": [
+      "amon@openrouteservice.org"
+  ],
   "license": "MIT",
-  "main": "dist/Vue2LeafletHeightGraph.umd.min.js",
-  "name": "vue2-leaflet-height-graph",
+  "bugs": {
+    "url": "https://github.com/GIScience/vue2-leaflet-height-graph/issues"
+  },
+  "bundleDependencies": false,
+  "homepage": "https://github.com/GIScience/vue2-leaflet-height-graph#readme",
   "peerDependencies": {
     "@types/leaflet": "^1.5.17",
-    "leaflet": "^1.6.0",
+    "leaflet": "^1.5.7",
     "vue2-leaflet": "^2.5.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GIScience/vue2-leaflet-height-graph.git"
+  "dependencies": {
+      "leaflet.heightgraph": "^1.3.2",
+      "current-script-polyfill": "^1.0.0"
   },
-  "scripts": {
-    "build": "vue-cli-service build --mode production --target lib --name Vue2LeafletHeightGraph src/Vue2LeafletHeightGraph.vue",
-    "lint": "vue-cli-service lint",
-    "serve": "vue-cli-service serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+      "@types/leaflet": "^1.5.17",
+      "@vue/cli": "^4.4.6",
+      "@vue/cli-plugin-eslint": "^4.4.6",
+      "@vue/cli-service": "^3.12.1",
+      "@vue/cli-service-global": "^4.4.6",
+      "leaflet": "^1.6.0",
+      "vue-template-compiler": "^2.6.11",
+      "vue2-leaflet": "^2.5.2",
+      "webpack-node-externals": "^1.7.2"
   },
-  "version": "0.3.0"
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  }
 }

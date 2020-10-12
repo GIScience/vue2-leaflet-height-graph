@@ -320,7 +320,8 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
       hgInstance: null,
       breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultParser: 'geoJson',
-      defaultPosition: 'bottomright'
+      defaultPosition: 'bottomright',
+      ready: false
     }
   },
   components: {
@@ -374,6 +375,7 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
       this.addData(this.data)
       this.isOpen = true
       this.watchCloseClick()
+      this.ready = true
     },
     /**
      * Add data to the component
@@ -534,13 +536,29 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
     if (this.hgInstance) {
       this.hgInstance.remove()
       this.isOpen = false
+      this.ready = false
     }
   },
   watch: {
-    data: function (newVal) {
-      this.$nextTick(() => {
-        this.addData(newVal)
-      })
+    data: {
+      handler: function (newVal) {
+        this.$nextTick(() => {
+          this.addData(newVal)
+        })
+      },
+      deep: true
+    },
+    'options': {
+      handler: function () {
+        this.ready = false
+        let context = this
+
+        setTimeout(() => {
+          context.ready = true
+          context.loadData()
+        }, 100)
+      },
+      deep: true
     }
   }
 });

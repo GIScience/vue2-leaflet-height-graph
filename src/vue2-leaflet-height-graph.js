@@ -14,7 +14,8 @@ export default {
       hgInstance: null,
       breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultParser: 'geoJson',
-      defaultPosition: 'bottomright'
+      defaultPosition: 'bottomright',
+      ready: false
     }
   },
   components: {
@@ -68,6 +69,7 @@ export default {
       this.addData(this.data)
       this.isOpen = true
       this.watchCloseClick()
+      this.ready = true
     },
     /**
      * Add data to the component
@@ -228,13 +230,29 @@ export default {
     if (this.hgInstance) {
       this.hgInstance.remove()
       this.isOpen = false
+      this.ready = false
     }
   },
   watch: {
-    data: function (newVal) {
-      this.$nextTick(() => {
-        this.addData(newVal)
-      })
+    data: {
+      handler: function (newVal) {
+        this.$nextTick(() => {
+          this.addData(newVal)
+        })
+      },
+      deep: true
+    },
+    'options': {
+      handler: function () {
+        this.ready = false
+        let context = this
+
+        setTimeout(() => {
+          context.ready = true
+          context.loadData()
+        }, 100)
+      },
+      deep: true
     }
   }
 }
