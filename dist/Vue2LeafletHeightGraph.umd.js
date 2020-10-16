@@ -330,7 +330,7 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
       breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultParser: 'geoJson',
       defaultPosition: 'bottomright',
-      ready: false
+      controlRef: null
     }
   },
   components: {
@@ -369,6 +369,10 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
       options.parser = options.parser || this.defaultParser
       options.position = options.position || this.defaultPosition
       return options
+    },
+    mapObject () {
+      const map = this.$parent.mapObject
+      return map
     }
   },
   methods: {
@@ -377,14 +381,13 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
      * the map and set the close button watcher
      */
     loadData () {
-      const map = this.$parent.mapObject
+      const map = this.mapObject
       let heightGraphOptions = this.buildHeightGraphOptions()
       this.hgInstance = this.leafletAcessor.control.heightgraph(heightGraphOptions)
-      this.hgInstance.addTo(map)
+      this.controlRef = this.hgInstance.addTo(map)
       this.addData(this.data)
       this.isOpen = true
       this.watchCloseClick()
-      this.ready = true
     },
     /**
      * Add data to the component
@@ -545,7 +548,7 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
     if (this.hgInstance) {
       this.hgInstance.remove()
       this.isOpen = false
-      this.ready = false
+      this.controlRef = null
     }
   },
   watch: {
@@ -559,11 +562,10 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
     },
     'options': {
       handler: function () {
-        this.ready = false
+        this.mapObject.removeControl(this.controlRef)
         let context = this
 
         setTimeout(() => {
-          context.ready = true
           context.loadData()
         }, 100)
       },

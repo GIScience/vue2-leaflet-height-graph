@@ -27,6 +27,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -->
 
+## [v0.3.1] - 2020-10-16
+
+- Added watcher for options and refresh the chart once it changes
+- Store a reference to the control added to the map and removes/re-add before refreshing the component
+based on options or data changes
+
 ## [v0.3.0] - 2020-10-08
 
 Refactored, improved in-code documentation and added internal responsiveness and and close event.
@@ -34,6 +40,7 @@ Refactored, improved in-code documentation and added internal responsiveness and
 ## [v0.2.0] - 2020-08-05
 
 ### Added
+
 - data watcher
     - changing the 'data' prop now rebuilds the graph without
     removing and adding the whole leaflet control by calling

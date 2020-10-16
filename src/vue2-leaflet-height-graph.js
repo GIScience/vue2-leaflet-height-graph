@@ -15,7 +15,7 @@ export default {
       breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultParser: 'geoJson',
       defaultPosition: 'bottomright',
-      ready: false
+      controlRef: null
     }
   },
   components: {
@@ -54,6 +54,10 @@ export default {
       options.parser = options.parser || this.defaultParser
       options.position = options.position || this.defaultPosition
       return options
+    },
+    mapObject () {
+      const map = this.$parent.mapObject
+      return map
     }
   },
   methods: {
@@ -62,14 +66,13 @@ export default {
      * the map and set the close button watcher
      */
     loadData () {
-      const map = this.$parent.mapObject
+      const map = this.mapObject
       let heightGraphOptions = this.buildHeightGraphOptions()
       this.hgInstance = this.leafletAcessor.control.heightgraph(heightGraphOptions)
-      this.hgInstance.addTo(map)
+      this.controlRef = this.hgInstance.addTo(map)
       this.addData(this.data)
       this.isOpen = true
       this.watchCloseClick()
-      this.ready = true
     },
     /**
      * Add data to the component
@@ -230,7 +233,7 @@ export default {
     if (this.hgInstance) {
       this.hgInstance.remove()
       this.isOpen = false
-      this.ready = false
+      this.controlRef = null
     }
   },
   watch: {
@@ -244,11 +247,10 @@ export default {
     },
     'options': {
       handler: function () {
-        this.ready = false
+        this.mapObject.removeControl(this.controlRef)
         let context = this
 
         setTimeout(() => {
-          context.ready = true
           context.loadData()
         }, 100)
       },
