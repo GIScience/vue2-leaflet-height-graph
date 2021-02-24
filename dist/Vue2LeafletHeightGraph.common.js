@@ -321,7 +321,8 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
       breakpointsOrder: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultParser: 'geoJson',
       defaultPosition: 'bottomright',
-      controlRef: null
+      controlRef: null,
+      addDataDebounceTimeoutId: null
     }
   },
   components: {
@@ -385,13 +386,19 @@ var L_Control_Heightgraph_min_css_ = __webpack_require__("ed27");
      * @param {Object} data 
      */
     addData (data) {
-      try {
-        let p = Object.keys(this.availableParsers).includes(this.optionsGetter.parser) ? this.optionsGetter.parser : 'noParser'
-        this.hgInstance.addData(this.availableParsers[p](data))
-      } catch (e) {
-        let error = `Unable to parse data using ${this.optionsGetter.parser} parser \n ${e.message}`
-        console.error(error)
-      }      
+      clearTimeout(this.addDataDebounceTimeoutId)
+      const context = this
+
+      // Make sure that the changes in the data are debounced
+      this.addDataDebounceTimeoutId = setTimeout(function () {
+        try {
+          let p = Object.keys(context.availableParsers).includes(context.optionsGetter.parser) ? context.optionsGetter.parser : 'noParser'
+          context.hgInstance.addData(context.availableParsers[p](data))
+        } catch (e) {
+          let error = `Unable to parse data using ${context.optionsGetter.parser} parser \n ${e.message}`
+          console.error(error)
+        }  
+      }, 200)   
     },
     /**
      * When the window size changes

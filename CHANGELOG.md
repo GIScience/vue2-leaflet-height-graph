@@ -27,6 +27,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -->
 
+## [v0.3.3] - 2021-02-22
+
+- Added debounce for addData method so that only the last call is processed
+
 ## [v0.3.1] - 2020-10-16
 
 - Added watcher for options and refresh the chart once it changes
