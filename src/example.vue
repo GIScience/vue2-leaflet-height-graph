@@ -136,4 +136,8 @@
         border-radius: 0.1em;
         cursor: pointer;
     }
+
+    #heightgraphWrapper {
+      max-width: 1000px;
+    }
 </style>

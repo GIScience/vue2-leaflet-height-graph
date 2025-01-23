@@ -50,38 +50,39 @@
             if(this.debug) {
                 console.log('mounted')
             }
-            this.$nextTick(() => {
-                const map = this.$parent.mapObject;
-                this.hgInstance = L.control.heightgraph({...this.options,...{
-                    // merges quick settings with options if they are defined
-                    ...(this.position && {position: this.position}),
-                    ...(this.expand && {expand: this.expand})
-                }})
-                this.controlRef = this.hgInstance.addTo(map)
-                if(this.container) {
-                  const container = document.getElementById(this.container);
-                  container.innerHTML = ''
-                  container.appendChild(this.controlRef.onAdd(map));
+            const map = this.$parent.mapObject;
+            this.hgInstance = L.control.heightgraph({...this.options,...{
+                // merges quick settings with options if they are defined
+                ...(this.position && {position: this.position}),
+                ...(this.expand && {expand: this.expand})
+            }})
+            this.controlRef = this.hgInstance.addTo(map)
+            if(this.container) {
+              const container = this.getContainer();
+              container.innerHTML = ''
+              container.appendChild(this.controlRef.onAdd(map));
+              window.addEventListener('resize', this.onResize);
 
-                  try {
-                    document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
-                  } catch (e) {
-                    console.error('Unable to hide the default height graph control')
-                  }
-                } else {
-                  this.hgInstance.addTo(map)
-                }
-              let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-              let dataCollections = this.availableParsers[p](this.data)
-                this.hgInstance.addData(dataCollections)
-            })
+
+              try {
+                document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
+              } catch (e) {
+                console.error('Unable to hide the default height graph control')
+              }
+            } else {
+              this.hgInstance.addTo(map)
+            }
+          let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
+          let dataCollections = this.availableParsers[p](this.data)
+            this.hgInstance.addData(dataCollections)
         },
         beforeDestroy() {
             if(this.debug) {
                 console.log('beforeDestroy')
             }
             if(this.hgInstance) {
-                this.hgInstance.remove()
+              window.removeEventListener('resize', this.onResize);
+              this.hgInstance.remove()
                 this.controlRef = null;
             }
         },
@@ -99,7 +100,16 @@
                     }
                 })
             }
+        },
+      methods: {
+        onResize() {
+          const { clientWidth: width, clientHeight: height } = this.getContainer();
+          this.hgInstance.resize({ width, height: this.options.height || height });
+        },
+        getContainer() {
+          return document.querySelector(this.container) || document.getElementById(this.container);
         }
+      }
     }
 </script>
 <style>
