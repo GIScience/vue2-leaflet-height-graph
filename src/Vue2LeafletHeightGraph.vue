@@ -59,8 +59,15 @@
                 }})
                 this.controlRef = this.hgInstance.addTo(map)
                 if(this.container) {
-                  document.getElementById(this.container).appendChild(this.controlRef.onAdd(map));
-                  document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
+                  const container = document.getElementById(this.container);
+                  container.innerHTML = ''
+                  container.appendChild(this.controlRef.onAdd(map));
+
+                  try {
+                    document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
+                  } catch (e) {
+                    console.error('Unable to hide the default height graph control')
+                  }
                 } else {
                   this.hgInstance.addTo(map)
                 }

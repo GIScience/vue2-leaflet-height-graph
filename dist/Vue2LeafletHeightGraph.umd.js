@@ -96,28 +96,21 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "ae28":
+/***/ "1f04":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ "c765":
+/***/ "7e2f":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ae28");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_id_3557b3ce_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("1f04");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_id_3557b3ce_prod_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_id_3557b3ce_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Vue2LeafletHeightGraph_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
-/***/ }),
-
-/***/ "dc65":
-/***/ (function(module, exports) {
-
-module.exports = require("current-script-polyfill");
 
 /***/ }),
 
@@ -146,9 +139,7 @@ __webpack_require__.d(parser_namespaceObject, "geoJson", function() { return geo
 // This file is imported into lib/wc client bundles.
 
 if (typeof window !== 'undefined') {
-  if (true) {
-    __webpack_require__("dc65")
-  }
+  if (false) {}
 
   var i
   if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
@@ -159,12 +150,13 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1d42ff75-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=28528e00&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"display":"none"}})}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"03e48f70-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=3557b3ce
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticStyle:{"display":"none"}})
+}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=28528e00&
+// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=template&id=3557b3ce
 
 // EXTERNAL MODULE: external "leaflet.heightgraph"
 var external_leaflet_heightgraph_ = __webpack_require__("ef37");
@@ -297,108 +289,110 @@ function geoJson(data) {
      return heighGraphConformalData
 }*/
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js
 
+    
+    
 
-
-
-/* harmony default export */ var Vue2LeafletHeightGraphvue_type_script_lang_js_ = ({
-    name: 'l-control-height-graph',
-    data () {
-        return {
-            availableParsers: parser_namespaceObject,
-            hgInstance: null,
-            controlRef: null,
-        }
-    },
-    props: {
-        position: {
-            type: String,
-            default: undefined
-        },
-        expand: {
-            type: Boolean,
-            default: undefined
-        },
-        data: {
-            type: [Object,Array],
-            default: () => []
-        },
-        parser: {
-            type: String,
-            default: 'normal'
-        },
-        options: {
-            type: Object,
-            default: () => {}
-        },
-        container: {
-          type: String | Boolean,
-          default: false
-        },
-        debug: {
-            type: Boolean,
-            default: false
-        }
-    },
-    mounted() {
-        if(this.debug) {
-            console.log('mounted')
-        }
-        this.$nextTick(() => {
-            const map = this.$parent.mapObject;
-            this.hgInstance = L.control.heightgraph({...this.options,...{
-                // merges quick settings with options if they are defined
-                ...(this.position && {position: this.position}),
-                ...(this.expand && {expand: this.expand})
-            }})
-            this.controlRef = this.hgInstance.addTo(map)
-            if(this.container) {
-              document.getElementById(this.container).appendChild(this.controlRef.onAdd(map));
-              document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
-            } else {
-              this.hgInstance.addTo(map)
+    /* harmony default export */ var Vue2LeafletHeightGraphvue_type_script_lang_js = ({
+        name: 'l-control-height-graph',
+        data () {
+            return {
+                availableParsers: parser_namespaceObject,
+                hgInstance: null,
+                controlRef: null,
             }
-          let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-          let dataCollections = this.availableParsers[p](this.data)
-            this.hgInstance.addData(dataCollections)
-        })
-    },
-    beforeDestroy() {
-        if(this.debug) {
-            console.log('beforeDestroy')
-        }
-        if(this.hgInstance) {
-            this.hgInstance.remove()
-            this.controlRef = null;
-        }
-    },
-    watch: {
-        data: function (newVal, oldVal) {
+        },
+        props: {
+            position: {
+                type: String,
+                default: undefined
+            },
+            expand: {
+                type: Boolean,
+                default: undefined
+            },
+            data: {
+                type: [Object,Array],
+                default: () => []
+            },
+            parser: {
+                type: String,
+                default: 'normal'
+            },
+            options: {
+                type: Object,
+                default: () => {}
+            },
+            container: {
+              type: String | Boolean,
+              default: false
+            },
+            debug: {
+                type: Boolean,
+                default: false
+            }
+        },
+        mounted() {
+            if(this.debug) {
+                console.log('mounted')
+            }
             this.$nextTick(() => {
-                if (this.debug) {console.log("data change")}
-                try {
-                    let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
-                    this.hgInstance.addData(this.availableParsers[p](newVal))
-                } catch(e) {
-                    console.error('Unable to parse data using "'
-                        + this.parser + '" parser.\n'
-                        + e)
-                }
-            })
-        }
-    }
-});
+                const map = this.$parent.mapObject;
+                this.hgInstance = L.control.heightgraph({...this.options,...{
+                    // merges quick settings with options if they are defined
+                    ...(this.position && {position: this.position}),
+                    ...(this.expand && {expand: this.expand})
+                }})
+                this.controlRef = this.hgInstance.addTo(map)
+                if(this.container) {
+                  const container = document.getElementById(this.container);
+                  container.innerHTML = ''
+                  container.appendChild(this.controlRef.onAdd(map));
 
-// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js&
- /* harmony default export */ var src_Vue2LeafletHeightGraphvue_type_script_lang_js_ = (Vue2LeafletHeightGraphvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=style&index=0&lang=css&
-var Vue2LeafletHeightGraphvue_type_style_index_0_lang_css_ = __webpack_require__("c765");
+                  try {
+                    document.querySelector('.leaflet-control-container .heightgraph.leaflet-control').hidden = true
+                  } catch (e) {
+                    console.error('Unable to hide the default height graph control')
+                  }
+                } else {
+                  this.hgInstance.addTo(map)
+                }
+              let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
+              let dataCollections = this.availableParsers[p](this.data)
+                this.hgInstance.addData(dataCollections)
+            })
+        },
+        beforeDestroy() {
+            if(this.debug) {
+                console.log('beforeDestroy')
+            }
+            if(this.hgInstance) {
+                this.hgInstance.remove()
+                this.controlRef = null;
+            }
+        },
+        watch: {
+            data: function (newVal, oldVal) {
+                this.$nextTick(() => {
+                    if (this.debug) {console.log("data change")}
+                    try {
+                        let p = Object.keys(this.availableParsers).includes(this.parser) ? this.parser : 'normal'
+                        this.hgInstance.addData(this.availableParsers[p](newVal))
+                    } catch(e) {
+                        console.error('Unable to parse data using "'
+                            + this.parser + '" parser.\n'
+                            + e)
+                    }
+                })
+            }
+        }
+    });
+
+// CONCATENATED MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=script&lang=js
+ /* harmony default export */ var src_Vue2LeafletHeightGraphvue_type_script_lang_js = (Vue2LeafletHeightGraphvue_type_script_lang_js); 
+// EXTERNAL MODULE: ./src/Vue2LeafletHeightGraph.vue?vue&type=style&index=0&id=3557b3ce&prod&lang=css
+var Vue2LeafletHeightGraphvue_type_style_index_0_id_3557b3ce_prod_lang_css = __webpack_require__("7e2f");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -407,20 +401,19 @@ var Vue2LeafletHeightGraphvue_type_style_index_0_lang_css_ = __webpack_require__
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -440,7 +433,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -465,7 +459,12 @@ function normalizeComponent (
     options._ssrRegister = hook
   } else if (injectStyles) {
     hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      ? function () {
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -474,18 +473,16 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -505,7 +502,7 @@ function normalizeComponent (
 /* normalize component */
 
 var component = normalizeComponent(
-  src_Vue2LeafletHeightGraphvue_type_script_lang_js_,
+  src_Vue2LeafletHeightGraphvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
